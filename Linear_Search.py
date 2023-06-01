@@ -1,14 +1,45 @@
-def linear_search(target, cities):
-    for i, city in enumerate(cities):
-        if city == target:
-            return i  # Return the index if the target is found
-    return -1  # Return -1 if the target is not found
+# Linear search is a sequential searching algorithm where we start from one end and check 
+# every element of the list until the desired element is found. 
+# It is the simplest searching algorithm.
 
-target_city = "Tbilisi"
-cities = ["London", "New York", "Paris", "Munich", "Mumbai", "Montreal", "Tbilisi", "Amsterdam"]
+# How Linear Search Works?
+# The following steps are followed to search for an element k = 1 in the list below.
 
-result = linear_search(target_city, cities)
-if result != -1:
-    print(f"The target city '{target_city}' is found at index {result}.")
+
+# 1. Start from the first element, compare k with each element x.
+
+# 2. If x == k, return the index.
+
+# 3. Else, return not found.
+
+# Linear Search Algorithm
+# LinearSearch(array, key)
+#   for each item in the array
+#     if item == value
+#       return its index
+
+
+# Linear Search in Python
+
+def linearSearch(array, n, x):
+
+    # Going through array sequencially
+    for i in range(0, n):
+        if (array[i] == x):
+            return i
+    return -1
+
+array = [2, 4, 0, 1, 9]
+x = 1
+n = len(array)
+result = linearSearch(array, n, x)
+if(result == -1):
+    print("Element not found")
 else:
-    print(f"The target city '{target_city}' is not found in the list.")
+    print("Element found at index: ", result)
+
+
+# Linear Search Complexities
+# Time Complexity: O(n)
+
+# Space Complexity: O(1)
