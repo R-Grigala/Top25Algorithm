@@ -18,7 +18,7 @@
 #     if item == value
 #       return its index
 
-
+# წრფივი ძებნა in Python
 # Linear Search in Python
 
 def linearSearch(array, n, x):
