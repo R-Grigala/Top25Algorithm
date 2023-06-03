@@ -69,7 +69,7 @@ def dfs(graph, start, visited=None):
     return visited
 
 
-graph = {'0': set(['1', '2', '3']),
+graph = {'0': set(['3', '2', '1']),
          '1': set(['0', '2']),
          '2': set(['0', '1', '4']),
          '3': set(['0']),
