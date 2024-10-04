@@ -45,18 +45,16 @@
 # BFS algorithm in Python
 
 
-import collections
-
 # BFS algorithm
 def bfs(graph, root):
 
-    visited, queue = set(), collections.deque([root])
+    visited, queue = set(), [root]
     visited.add(root)
-
+ 
     while queue:
 
         # Dequeue a vertex from queue
-        vertex = queue.popleft()
+        vertex = queue.pop(0)
         print(str(vertex) + " ", end="\n")
 
         # If not visited, mark it as visited, and
